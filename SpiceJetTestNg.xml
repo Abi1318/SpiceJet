@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.SpiceJet.Utils.Reports"></listener>
+	</listeners>
+	<test thread-count="5" name="chromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+		 	<class name="com.SpiceJet.Utils.SpiceJetBaseTest"></class>
+			<class name="com.SpiceJet.Utils.Reports"></class>
+			<class name="com.SpiceJet.Tests.SignUpTest" />
+			<class name="com.SpiceJet.Tests.LoginPositiveTest" />
+			<class name="com.SpiceJet.Tests.LoginNegativeTest"></class>  
+			<class name="com.SpiceJet.Tests.OneWayTest"></class>
+			<class name="com.SpiceJet.Tests.RoundTest"></class>
+			<class name="com.SpiceJet.Tests.BookingTest"></class>
+			<class name="com.SpiceJet.Tests.DummyInfoTest"></class>
+			<class name="com.SpiceJet.Tests.CheckInFieldTest"></class>
+			<class name="com.SpiceJet.Tests.FlightStatusFieldTest"></class>
+			<class name="com.SpiceJet.Tests.ManageBookingTest"></class> 
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="edgeTest">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.SpiceJet.Utils.SpiceJetBaseTest"></class>
+			<class name="com.SpiceJet.Utils.Reports"></class>
+			<class name="com.SpiceJet.Tests.SignUpTest" />
+			<class name="com.SpiceJet.Tests.LoginPositiveTest" />
+			<class name="com.SpiceJet.Tests.LoginNegativeTest"></class> 
+			<class name="com.SpiceJet.Tests.OneWayTest"></class>
+			<class name="com.SpiceJet.Tests.RoundTest"></class>
+			<class name="com.SpiceJet.Tests.BookingTest"></class>
+			<class name="com.SpiceJet.Tests.DummyInfoTest"></class>
+			<class name="com.SpiceJet.Tests.CheckInFieldTest"></class>
+			<class name="com.SpiceJet.Tests.FlightStatusFieldTest"></class>
+			<class name="com.SpiceJet.Tests.ManageBookingTest"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
